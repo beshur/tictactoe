@@ -74,8 +74,8 @@ button:hover {
 }
 .gameField > div {
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 30%;
+  padding: 14%;
   border: 1px solid #006AAA;
 
 }
