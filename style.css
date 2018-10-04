@@ -1,0 +1,131 @@
+/* TicTacToe */
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  min-height: 100%;
+  background-color: #1E2836;
+}
+body * {
+  box-sizing: border-box;
+}
+#app {
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 100%;
+
+  background: #3E4D65;
+  color: #0098F2;
+  box-shadow: 0 0 20px -5px rgba(0, 0, 0, .16);
+}
+
+.wrapper {
+  padding: 10px;
+  text-align: center;
+}
+
+.playerSelect {
+  display: flex;
+  margin: 20px auto;
+  max-width: 300px;
+}
+button {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #006AAA;
+  color: #000;
+  border: 0;
+  box-shadow: 0 0 10px -1px #333;
+}
+button:hover {
+  background-color: #0098F2;
+  box-shadow: none;
+}
+
+.playerSelect button {
+  width: 46%;
+  height: 100px;
+  margin: 2%;
+  text-indent: -9999px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: url(./img/x_mark.png);
+}
+
+.playerSelect button[data-player='o'] {
+  background-image: url(./img/o_mark.png);
+}
+
+.game {
+  padding: 0 0 20px
+}
+
+.gameOver .game > .restart {
+  display: none;
+}
+
+.gameField {
+  margin: 0 0 40px;
+  text-align: center;
+  font-size: 0;
+}
+.gameField > div {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #006AAA;
+
+}
+.gameField > div[data-player='x'] {
+  background: url(./img/x_mark.png) 50% 50% no-repeat;
+}
+.gameField > div[data-player='o'] {
+  background: url(./img/o_mark.png) 50% 50% no-repeat;
+}
+.gameField > div:hover {
+  cursor: pointer;
+  background-color: rgba(0, 255, 0, .03);
+}
+.gameField > div:active {
+  background-color: rgba(0, 0, 255, .03);
+}
+.gameOver .gameField > div,
+.gameOver .gameField > div:hover,
+.gameField > div[data-player]:active,
+.gameField > div[data-player]:hover {
+  cursor: not-allowed;
+  background-color: #3E4D65;
+}
+
+
+.results {
+  
+}
+.resultsIn {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.restart {
+  padding: 10px;
+}
+.restart button {
+
+}
+
+.currentPlayer {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.gameOver .currentPlayer {
+  display: none;
+}
+
+.player {
+  text-transform: uppercase;  
+  color: green;
+}
